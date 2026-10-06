@@ -1,0 +1,53 @@
+# =========================
+# Build files
+# =========================
+build/
+bin/
+obj/
+Debug/
+Release/
+
+# Compiled executables
+*.exe
+
+# C/C++ object files
+*.o
+*.obj
+
+# Libraries
+*.a
+*.lib
+*.so
+*.dll
+*.dylib
+
+# =========================
+# VS Code
+# =========================
+.vscode/
+
+# =========================
+# OS files
+# =========================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# =========================
+# Temporary files
+# =========================
+*.tmp
+*.temp
+*~
+*.swp
+*.swo
+
+# =========================
+# CMake (if you add it later)
+# =========================
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+cmake-build-*/
