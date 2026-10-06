@@ -1,3 +1,18 @@
+
+# The tutorial posted with its makefile only works on windows PC so be warned
+
+
+
+
+
+
+<br>
+<br />
+<br>
+<br />
+
+
+
 # Raylib C++ Starter Template for VS Code
 
 ![Language](https://img.shields.io/badge/language-C%2B%2B-brightgreen)
