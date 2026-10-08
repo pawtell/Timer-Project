@@ -1,0 +1,7 @@
+Some quick notes about PyQt
+    I am using PyQt6 on a macbook (pro) 
+    I would also recommend installing the Qt for Python extension on vscode. I am not sure if its absolutely necessary but 
+    it works with my macbook. 
+    The example I did only opens a window and it is resizable. There is nothing on there yet (no buttons, text, etc).
+    Additionally I did this quick example following a BroCode video.
+    
