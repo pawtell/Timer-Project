@@ -26,7 +26,7 @@ finally, navigate to the folder where the repo was cloned to, then run using the
 ```console
 python3 main.py
 ```
-# Credits and Contact
+# Credits / Contributors
 <a href="https://github.com/pawtell/Timer-Project/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=pawtell/Timer-Project" />
 </a>
