@@ -9,7 +9,7 @@ A simple timer program built using PyQt6
 This project aims to provide a simple countdown timer app that is easy to run and available cross platform. 
 
 # To get started / Installation 
-This project requires PyQt6 to run so first install pyqt6 (if not already installed) through the terminal:
+This project requires PyQt6 to run so if it is already installed skip to the final step!
 ```console
 pip3 install PyQt6
 ```
