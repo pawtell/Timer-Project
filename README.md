@@ -1,4 +1,29 @@
-# Timer-Project
-Mini Project for Class
+# Simple Timer
+A simple timer program built using PyQt6
+<p>
+  <img width="469" height="398" alt="Screenshot 2026-10-11 at 9 46 06 PM" src="https://github.com/user-attachments/assets/89dcd7d9-15e9-42fc-be41-74658b17a4f9" />
+</p>
 
-This is a short timer project that uses PyQt6. 
+
+# Project Manifesto
+This project aims to provide a simple countdown timer app that is easy to run and available cross platform. 
+
+# To get started / Installation 
+This project requires PyQt6 to run so first install pyqt6 (if not already installed) through the terminal:
+```console
+pip3 install PyQt6
+```
+or 
+```console
+python3 -m pip PyQt6
+```
+then clone this repository 
+```git
+git clone <https://github.com/pawtell/Timer-Project>
+```
+finally, navigate to the folder where the repo was cloned to, then run using the python3 command and main.py
+
+```console
+python3 main.py
+```
+# Credits and Contact
