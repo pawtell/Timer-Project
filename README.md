@@ -27,3 +27,8 @@ finally, navigate to the folder where the repo was cloned to, then run using the
 python3 main.py
 ```
 # Credits and Contact
+<a href="https://github.com/pawtell/Timer-Project/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=pawtell/Timer-Project" />
+</a>
+
+Made with [contrib.rocks](https://contrib.rocks).
