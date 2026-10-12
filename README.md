@@ -1,6 +1,3 @@
-# notice the example project uploaded only works on windows right now
-
-
 # Timer-Project
 Mini Project for Class
 
