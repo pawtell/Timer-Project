@@ -24,7 +24,7 @@ class MainWindow(QMainWindow): #inherits from QMainWindow
         # Timer display
         self.timer_label = QLabel("05:00")
         self.timer_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        self.timer_label.setFont(QFont("Arial", 36))
+        #self.timer_label.setFont(QFont("Arial", 36))
 
         layout.addWidget(self.timer_label, alignment=Qt.AlignmentFlag.AlignCenter)
 
@@ -36,6 +36,9 @@ class MainWindow(QMainWindow): #inherits from QMainWindow
         self.minutes_input.setRange(0, 99)
         self.minutes_input.setValue(5)
         self.minutes_input.setPrefix("Minutes: ")
+        QTimer.singleShot(0, lambda: self.minutes_input.lineEdit().setCursorPosition(
+            len(self.minutes_input.lineEdit().text())
+        ))
 
         self.seconds_input = QSpinBox()
         self.seconds_input.setRange(0, 59)
@@ -83,8 +86,48 @@ class MainWindow(QMainWindow): #inherits from QMainWindow
         self.tick = QTimer(self)
         self.tick.setInterval(100)
         self.tick.timeout.connect(self.update_display)
+        
 
         self.refresh_ui()
+
+        self.setStyleSheet("""
+            QPushButton{
+                font-size: 50px;
+                font-family: "Roboto";
+            }
+            QPushButton:hover {
+                background-color: #30422b;
+            }
+            QPushButton:pressed {
+                background-color: #1A202C;
+            }
+            QLabel{
+                font-size: 100px;
+                font-family: "Roboto";
+            }
+            QSpinBox {
+                font-family: "Roboto";
+                font-size: 15px;
+                font-weight: 5000;
+                border: 1px solid #555;
+                border-radius: 6px;
+                background-color: #222;
+                color: white;
+                min-width: 100px
+            }
+            QSpinBox:hover {
+                background-color: #30422b;
+            }
+            QSpinBox:Focus{
+                border: 1px solid #63B3ED;
+            }
+            QSpinBox::up-button {
+                width: 25px;
+            }
+            QSpinBox::down-button {
+                width: 25px;
+            }
+        """)
 
     def start(self):
         # Fresh start: grab the inputs and clear old time passed value
