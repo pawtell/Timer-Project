@@ -7,19 +7,19 @@ class MainWindow(QMainWindow): #inherits from QMainWindow
     def __init__(self): 
         super().__init__() #calls QMainWindow constructor
         self.setWindowTitle("Timer Project") #sets window title
-        self.resize(500,500) # TODO: center on screen 
-        self.setWindowIcon(QIcon("cclock.png"))
+        self.resize(800,500) # Sets the window size (width, height)
+        self.setWindowIcon(QIcon("cclock.png")) #sets the window icon
 
          # Main widget and vertical layout
-        widget = QWidget()
-        self.setCentralWidget(widget)
+        widget = QWidget() #defines the Qwidget function as widget 
+        self.setCentralWidget(widget) 
 
-        layout = QVBoxLayout(widget)
+        layout = QVBoxLayout(widget) 
         layout.setSpacing(15)
         layout.setContentsMargins(30, 30, 30, 30)
 
         # Empty space above the timer
-        layout.addStretch()
+        layout.addStretch() #adds empty space above the timer
 
         # Timer display
         self.timer_label = QLabel("05:00")
@@ -108,7 +108,7 @@ class MainWindow(QMainWindow): #inherits from QMainWindow
             QSpinBox {
                 font-family: "Roboto";
                 font-size: 15px;
-                font-weight: 5000;
+                font-weight: 500;
                 border: 1px solid #555;
                 border-radius: 6px;
                 background-color: #222;
@@ -199,13 +199,13 @@ class MainWindow(QMainWindow): #inherits from QMainWindow
 
     # Helper, total ms - time counted during stretch in ms, if timer is running
     def remaining_ms(self):
-        if self.state == "idle":
-            return self.input_ms()
-        if self.state == "finished":
-            return 0
-        used = self.time_elapsed
-        if self.state == "running":
-            used += self.clock.elapsed()    # add the current running stretch
+        if self.state == "idle": #Checks if the timer is in its 'idle' state
+            return self.input_ms() #Returns input if idle (Timer is not running)
+        if self.state == "finished": #Checks id the timer is in its 'finished' state
+            return 0 #Returns 0 (error handling)
+        used = self.time_elapsed # Assigns the time elapsed since the Timer was started and assigns to 'used' variable
+        if self.state == "running": #Checks if the timer is in the 'running' state
+            used += self.clock.elapsed()    # add the current running stretch, makes sure the timer does not reset to beginning time
         return max(0, self.total_ms - used) # failsafe, never returns negative 
 
 
